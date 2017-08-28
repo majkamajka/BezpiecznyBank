@@ -1,3 +1,107 @@
-p {
-  color: magenta;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// variables
+
+$main: #50c5da;
+$bgColor: #ebebeb;
+$white: #ffffff;
+$text: #656565;
+
+html {
+  font-size: 62.5%;
+  color: $text;
+}
+
+body {
+  background-color: $bgColor;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: block;
+  background-color: $white;
+}
+
+.search {
+  background-color: $bgColor;
+  height: 60px;
+  padding: 6px 0px;
+  box-sizing: border-box;
+  .search-wrapper {
+    margin-top: 5px;
+    float: right;
+    input {
+      width: 134px;
+      height: 32px;
+      background-color: $white;
+      border: none;
+      font-size: 1.8rem;
+      padding-left: 10px;
+      box-sizing: border-box;
+      &::placeholder {
+        color: #e3e3e3;
+      }
+    }
+    button {
+      height: 32px;
+      border: none;
+      &[name="szukaj"] {
+        width: 32px;
+        background-color: $white;
+      }
+      &[name="log-in"] {
+        width: 168px;
+        background-color: $main;
+        margin-left: 6px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+header {
+  * {
+    border: 1px solid magenta;
+  }
+  nav {
+    display: inline-block;
+    height: 60px;
+    ul {
+      list-style: none;
+      font-weight: 600;
+      li {
+        display: inline-block;
+        padding: 0 15px;
+        border-left: 1px solid $bgColor;
+        &:first-child {
+          border: none;
+        }
+        &:hover {
+          color: #297f8f;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 3rem;
+    font-family: serif;
+    color: black;
+    display: inline-block;
+    float: right;
+    margin-right: 25px;
+  }
+  .spiker-border {
+
+  }
+  main {
+    height: 450px;
+    background-image: url('../images/main.jpg');
+  }
+
 }

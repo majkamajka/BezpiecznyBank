@@ -4,15 +4,24 @@
     <meta charset="utf-8">
     <title>Bezpieczny Bank</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700&amp;subset=latin-ext" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <img src="" alt="logo" title="Go to homepage">
-      <input type="text" name="szukaj" value="" placeholder="Szukaj" />
-      <button type="button" name="szukaj">X</button>
-      <button type="button" name="log-in">Zaloguj</button>
+
+<!--logo $ search     -->
+
+    <div class="container search">
+      <img src="./images/logo.png" alt="logo" title="Go to homepage">
+      <div class="search-wrapper">
+        <input type="text" name="szukaj" value="" placeholder="Szukaj" />
+        <button type="button" name="szukaj">X</button>
+        <button id="login" type="button" name="log-in">Zaloguj</button>
+      </div>
     </div>
-    <header>
+
+
+
+    <header class="container">
       <nav>
         <ul>
           <li>Klienci indywidualni</li>
@@ -24,15 +33,21 @@
         </ul>
       </nav>
       <p>Bezpieczny Bank</p>
-      <div>
+
+<!-- main    -->
+
+      <div class="spiked-border"></div>
+
+      <main>
         <div>
           <h2>Skorzystaj ze specjalnej oferty</h2>
           <h1>PODRÓŻUJ BEZ OBAW</h1>
           <button>SPRAWDŹ</button>
         </div>
-      </div>
+      </main>
     </header>
-    <section>
+
+    <section class="container">
       <div>
         <div>
           <img src="" alt="klucz">
@@ -57,7 +72,7 @@
 
     </section>
 
-    <section>
+    <section class="container">
 
       <div>
         <div>
@@ -86,7 +101,7 @@
 
     </section>
 
-    <section>
+    <section class="container">
       <div class="">
         <div class="">
           <h2>Klienci indywidualni</h2>
@@ -132,7 +147,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="container">
       <p>801 222 222</p>
       <p>&copy; 2015 BB Bezpieczny Bank SA. Wszelkie prawa zastrzeżone. Korzystanie z serwisu oznacza akceptację regulaminu.</p>
       <ul>
