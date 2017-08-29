@@ -141,9 +141,6 @@ header {
   padding-top: 70px;
   height: 368px;
   .keys {
-    * {
-      border: 1px dotted magenta;
-    }
     position: relative;
     width: 50%;
     display: inline-block;
@@ -156,24 +153,98 @@ header {
       display: inline-block;
       width: 260px;
       margin-left: 214px;
-      h2 {
-        font-weight: 600;
-        font-size: 2.8rem;
-        margin-bottom: 44px;
-      }
-      a {
-        float: right;
-        color: $main;
-        font-size: 1.9rem;
-      }
     }
   }
+  h2 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-bottom: 44px;
+  }
+  a {
+    float: right;
+    color: $main;
+    font-size: 1.9rem;
+  }
   .sliders {
-    * {
-      border: 1px dotted magenta;
-    }
+    vertical-align: top;
     width: 50%;
     display: inline-block;
+    padding-left: 90px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    .sliders-wrapper {
+      display: inline-block;
+      font-size: 1.4rem;
+      border-bottom: 1px solid $main;
+      label {
+        padding-left: 8px;
+      }
+      span {
+        float: right;
+      }
+      input[type=range] {
+        margin-bottom: 30px;
+        display: block;
+        width: 333px;
+        -webkit-appearance: none;
+        background: transparent;
+        height: 40px;
+        &::-webkit-slider-thumb {
+          margin-top: -8px;
+          -webkit-appearance: none;
+          height: 38px;
+          width: 62px;
+          background-color: $main;
+          border-radius: 7px;
+        }
+        &::-moz-range-thumb {
+          margin-top: -8px;
+          -webkit-appearance: none;
+          height: 38px;
+          width: 62px;
+          background-color: $main;
+          border-radius: 7px;
+        }
+        &::-ms-thumb {
+          margin-top: -8px;
+          -webkit-appearance: none;
+          height: 38px;
+          width: 62px;
+          background-color: $main;
+          border-radius: 7px;
+        }
+        &:focus {
+          outline: none;
+        }
+        &::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 20px;
+          cursor: pointer;
+          background: $bgColor;
+        }
+
+        &:focus::-webkit-slider-runnable-track {
+          background: $bgColor;
+        }
+
+        &::-moz-range-track {
+          width: 100%;
+          height: 20px;
+          cursor: pointer;
+          background: $bgColor;
+        }
+
+        &::-ms-track {
+          cursor: pointer;
+          background: transparent;
+          border-color: transparent;
+          color: transparent;
+        }
+      }
+
+    }
+
   }
 
 }
