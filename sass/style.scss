@@ -263,21 +263,17 @@ header {
 }
 
 .actions {
-  // *{
-  //   border: 1px dotted magenta;
-  // }
   height: 380px;
   background-color: $main;
   padding-top: 60px;
   color: $white;
-
   .action {
     width: 33%;
     display: inline-block;
     text-align: center;
     h2 {
       margin-top: 25px;
-      margin-bottom: 0;
+      margin-bottom: 4px;
       font-weight: 500;
       font-size: 3rem;
     }
@@ -304,5 +300,34 @@ header {
       padding-right: 50px;
     }
   }
+}
 
+.offers {
+
+  padding-top: 30px;
+  .offer {
+    padding-left: 100px;
+    width: 33%;
+    display: inline-block;
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    ul {
+      padding-left: 10px;
+      list-style-position: inside;
+      list-style-image: url('../images/list.jpg');
+      font-size: 1.4rem;
+      li {
+        line-height: 28px;
+      }
+    }
+    &:nth-child(2) {
+      padding-left: 70px;
+    }
+    &:nth-child(3) {
+      padding-left: 55px;
+    }
+  }
 }
