@@ -263,6 +263,46 @@ header {
 }
 
 .actions {
+  // *{
+  //   border: 1px dotted magenta;
+  // }
   height: 380px;
   background-color: $main;
+  padding-top: 60px;
+  color: $white;
+
+  .action {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    h2 {
+      margin-top: 25px;
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: 3rem;
+    }
+    button {
+      font-size: 2.2rem;
+      color: $white;
+      background-color: $main;
+      width: 240px;
+      height: 50px;
+      border: 1px solid $white;
+      border-radius: 7px;
+      margin-top: 15px;
+      &:hover {
+        background-color: $white;
+        color: $main;
+        border: 1px solid $main;
+        box-shadow: 0 0 15px $white;
+      }
+    }
+    &:first-child {
+      padding-left: 50px;
+    }
+    &:last-child {
+      padding-right: 50px;
+    }
+  }
+
 }
