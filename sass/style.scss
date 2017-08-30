@@ -22,6 +22,10 @@ body {
   font-size: 1.6rem;
 }
 
+button, a {
+  cursor: pointer;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -36,11 +40,12 @@ body {
   .search-wrapper {
     margin-top: 5px;
     float: right;
-    input {
+    input[name="szukaj"] {
+      vertical-align: middle;
       width: 134px;
       height: 32px;
       background-color: $white;
-      border: none;
+      border: 1px solid #e3e3e3;
       font-size: 1.8rem;
       padding-left: 10px;
       &::placeholder {
@@ -50,27 +55,36 @@ body {
     button {
       height: 32px;
       border: none;
-      &[name="szukaj"] {
+      vertical-align: middle;
+      &[name="search"] {
         width: 32px;
         background-color: $white;
+        border: 1px solid #e3e3e3;
+        border-left: none;
+        background-image: url('../images/magnifying.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
       }
       &[name="log-in"] {
         width: 168px;
         background-color: $main;
         margin-left: 6px;
         border-radius: 5px;
+        color: $white;
+        font-size: 1.7rem;
       }
     }
   }
 }
 
 header {
+  height: 60px;
+  padding-top: 28px;
   nav {
     display: inline-block;
-    height: 60px;
     ul {
       list-style: none;
-      font-weight: 600;
+      font-weight: 500;
       li {
         display: inline-block;
         padding: 0 15px;
@@ -85,54 +99,57 @@ header {
     }
   }
   p {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-family: serif;
     color: black;
     display: inline-block;
     float: right;
     margin-right: 25px;
+    margin-top: -6px;
   }
-  .spiked-border {
-    display: block;
-    height: 8px;
-    background-image: url('../images/spikes.png');
-  }
-  main {
-    height: 450px;
-    background-image: url('../images/main.jpg');
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top: 16px solid $main;
-    overflow: hidden;
-    .main-box {
-      float: right;
-      background-color: $main;
-      border-radius: 5px;
+}
+
+.spiked-border {
+  display: block;
+  height: 8px;
+  background-image: url('../images/spikes.png');
+}
+main {
+  height: 450px;
+  background-image: url('../images/main.jpg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 16px solid $main;
+  overflow: hidden;
+
+  .main-box {
+    float: right;
+    background-color: $main;
+    border-radius: 5px;
+    color: $white;
+    height: 200px;
+    width: 405px;
+    margin-right: -5px;
+    margin-top: 76px;
+    padding: 32px 38px 0 38px;
+    h2 {
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 2.9rem;
+    }
+    button {
       color: $white;
-      height: 200px;
-      width: 405px;
-      margin-right: -5px;
-      margin-top: 76px;
-      padding: 32px 38px 0 38px;
-      h2 {
-        font-weight: 400;
-        font-size: 1.6rem;
-      }
-      h1 {
-        font-weight: 600;
-        font-size: 2.9rem;
-      }
-      button {
-        color: $white;
-        background-color: #272727;
-        height: 42px;
-        width: 195px;
-        border-radius: 10px;
-        margin-top: 55px;
-        font-size: 1.8rem;
-        border: none;
-      }
+      background-color: #272727;
+      height: 42px;
+      width: 195px;
+      border-radius: 10px;
+      margin-top: 55px;
+      font-size: 1.8rem;
+      border: none;
     }
   }
 }
@@ -178,6 +195,9 @@ header {
     display: inline-block;
     font-size: 1.4rem;
     width: 333px;
+    h2 {
+      margin-bottom: 23px;
+    }
     label {
       padding-left: 8px;
     }
@@ -185,7 +205,7 @@ header {
       float: right;
     }
     input[type=range] {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       display: block;
       width: 333px;
       -webkit-appearance: none;
@@ -243,7 +263,8 @@ header {
     }
     .summary {
       border-top: 1px solid $main;
-      padding-top: 20px;
+      padding-top: 25px;
+      margin-top: 10px;
       h3 {
         display: inline-block;
         font-size: 2rem;
@@ -257,9 +278,7 @@ header {
 
     }
   }
-  h2 {
-    margin-bottom: 20px;
-  }
+
 }
 
 .actions {
@@ -348,10 +367,11 @@ header {
     float: right;
     li {
       display: inline-block;
-      border-left: 1px solid #a0a0a0;
+      border-right: 1px solid #a0a0a0;
       padding: 0 12px;
-      &:first-child {
+      &:last-child {
         border: none;
+        padding-right: 2px;
       }
     }
   }
